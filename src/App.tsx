@@ -1,5 +1,5 @@
 import './App.css'
-import { FamilyComponent } from './Components/family-component/FamilyComponent';
+import { ArrayComponent } from './Components/array-component/ArrayComponent';
 
 const App = () => {
 
@@ -7,7 +7,7 @@ const App = () => {
 
   return (
     <>
-      <FamilyComponent/>
+      <ArrayComponent/>
     </>
   )
 }
