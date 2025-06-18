@@ -1,5 +1,13 @@
 import './App.css'
-import { CoursesComponent } from './Components/course-component/Components'
+
+const coursesTitleArray:string[] = [
+  'JavaScript Complex',
+  'Java Complex',
+  'Python Complex',
+  'QA Complex',
+  'Fullstack',
+  'Frontend'
+];
 
 const App = () => {
 
@@ -7,7 +15,12 @@ const App = () => {
 
   return (
     <>
-    <CoursesComponent/>
+      <ul>
+        
+    {
+      coursesTitleArray.map((value, index) => <li key={index}>{value}</li>)
+    }
+    </ul>
     </>
   )
 }
