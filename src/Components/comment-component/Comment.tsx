@@ -1,14 +1,13 @@
 import type { FC } from "react"
-import type { CommentModel } from "../../models/CommentModel"
+import type { PostModel } from "../../models/PostModel"
 
 
-type CommentProp = {comment: CommentModel};
+type PostsProp = {post: PostModel};
 
-export const Comment:FC<CommentProp> = ({comment:{email, body}}) => {
+export const Post:FC<PostsProp> = ({post:{body}}) => {
     return (
         <div>
-            <h3>{email}</h3>
-            <p>{body}</p>
+            <h3>{body}</h3>
         </div>
     )
 }

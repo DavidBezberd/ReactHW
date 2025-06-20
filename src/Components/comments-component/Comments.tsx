@@ -1,24 +1,24 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
 import './Comments.css';
-import type {CommentModel} from '../../models/CommentModel';
-import {loadComments} from '../../service/api.service';
-import { Comment } from '../comment-component/Comment';
+import type {PostModel} from '../../models/PostModel';
+import {loadPosts} from '../../service/api.service';
+import { Post } from '../comment-component/Comment';
 
-export const Comments  = () => {
-    const [comments, setComments] = useState<CommentModel[]>([]);
+export const Posts  = () => {
+    const [post, setPost] = useState<PostModel[]>([]);
     useEffect(() => {
      async function fetchPosts(){
-        let allPosts = await loadComments();
-        setComments(allPosts);
+        let allPosts = await loadPosts();
+        setPost(allPosts);
      } 
 
      fetchPosts();
     }, []);
     return (
         <div>
-          {comments.map(comment => (
-            <Comment comment={comment} key={comment.id} />
+          {post.map(post => (
+            <Post post={post} key={post.id} />
           ))}
         </div>
       );

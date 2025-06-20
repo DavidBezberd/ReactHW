@@ -1,14 +1,17 @@
-import type { CommentModel } from "../models/CommentModel";
+import type { PostModel } from "../models/PostModel";
+import type { PostResponseDummyjson } from "../models/PostResponseDummyJSON";
 
-const endpointTodos = import.meta.env.VITE_API_BASE_URL + '/comments';
+const endpointTodos = import.meta.env.VITE_API_BASE_URL + '/posts';
 
 
 
-const loadComments = async (): Promise<CommentModel[]> =>{
+const loadPosts = async (): Promise<PostModel[]> =>{
 
-    return await fetch(endpointTodos)
+    const response:PostResponseDummyjson = await fetch(endpointTodos)
     
     .then(value => value.json());
+
+    return response.posts;
 }
 
-export {loadComments};
+export {loadPosts};
