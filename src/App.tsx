@@ -1,10 +1,10 @@
 import './App.css'
-import { Posts } from './Components/posts-component/Posts.tsx';
+import { Comments } from './Components/comments-component/Comments.tsx';
 
 function App () {
   return (
     <>
-    <Posts  />
+    <Comments  />
     </>
   );
 }
