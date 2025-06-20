@@ -1,14 +1,14 @@
-import type { TodoModel } from "../models/TodoModel";
+import type { PostModel } from "../models/PostModel";
 
-const endpointTodos = import.meta.env.VITE_API_BASE_URL + '/todos';
+const endpointTodos = import.meta.env.VITE_API_BASE_URL + '/posts';
 
 
 
-const loadTodos = async (): Promise<TodoModel[]> =>{
+const loadPosts = async (): Promise<PostModel[]> =>{
 
     return await fetch(endpointTodos)
     
     .then(value => value.json());
 }
 
-export {loadTodos};
+export {loadPosts};
