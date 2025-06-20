@@ -1,13 +1,10 @@
 import './App.css'
-import { Todos } from './Components/todos-component/Todos';
+import { Todos } from './Components/todos-component/Todos.tsx';
 
-const App = () => {
-
-
-
+function App () {
   return (
     <>
-      <Todos/>  
+    <Todos/>
     </>
   );
 }

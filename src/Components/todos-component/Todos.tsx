@@ -8,13 +8,15 @@ import { Todo } from '../todo-component/Todo';
 export const Todos  = () => {
     const [todos, setTodo] = useState<TodoModel[]>([]);
     useEffect(() => {
-           loadTodos().then(value => setTodo(value));
+
+           loadTodos().then(value => 
+            setTodo(value));
     }, []);
     return (
         <div>
-           {
-            todos.map(todo => <Todo todo={todo} key={todo.id}/>)
-           }
+          {todos.map(todo => (
+            <Todo todo={todo} key={todo.id} />
+          ))}
         </div>
-    )
-}
+      );
+};

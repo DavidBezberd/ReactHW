@@ -4,7 +4,7 @@ import type { TodoModel } from "../../models/TodoModel"
 
 type PropType = {todo: TodoModel};
 
-export const Todo:FC<PropType>= ({todo: {title, id, userId, completed}}) => {
+export const Todo:FC<PropType>= ({todo: {title, id, completed}}) => {
     return (
         <div>
         {id} {title} {completed.toString()} 
