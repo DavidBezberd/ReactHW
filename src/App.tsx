@@ -1,5 +1,5 @@
 import './App.css'
-import { ArrayComponent } from './Components/array-component/ArrayComponent';
+import { Todos } from './Components/todos-component/Todos';
 
 const App = () => {
 
@@ -7,9 +7,9 @@ const App = () => {
 
   return (
     <>
-      <ArrayComponent/>
+      <Todos/>  
     </>
-  )
+  );
 }
 
 export default App
