@@ -1,4 +1,4 @@
-import type {PostModel} from './PostModel'
+import type {ProductModel} from './ProductModel'
 
 export interface PostResponseDummyjson 
- {posts:PostModel[], skip: number, total: number, limit: number};
+ {products:ProductModel[], total: number, skip: number, limit: number};

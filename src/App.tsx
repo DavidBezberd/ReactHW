@@ -1,10 +1,10 @@
 import './App.css'
-import { Posts } from './Components/comments-component/Comments.tsx';
+import { Products } from './Components/products-component/Products.tsx';
 
 function App () {
   return (
     <>
-    <Posts  />
+    <Products/>
     </>
   );
 }
