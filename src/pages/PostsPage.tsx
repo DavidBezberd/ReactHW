@@ -1,9 +1,9 @@
-import { UsersComponent } from "../components/users-components/UsersComponent"
+import { PostsComponent } from "../components/posts-components/PostsComponent"
 
-export const UsersPage = () => {
+export const PostsPage = () => {
      return(
         <>
-        <UsersComponent/>
+        <PostsComponent/>
         </>
      )
 }

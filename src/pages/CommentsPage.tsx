@@ -1,9 +1,9 @@
-import { UsersComponent } from "../components/users-components/UsersComponent"
+import { CommentsComponent } from "../components/comments-components/CommentsComponent"
 
 export const CommentsPage = () => {
      return(
         <>
-        <CommentsPage/>
+        <CommentsComponent/>
         </>
      )
 }
