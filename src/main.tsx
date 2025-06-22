@@ -6,6 +6,7 @@ import { DummyUsersPage } from './pages/DummyUsersPage.tsx'
 import { JsonPostsPage } from './pages/JsonPostsPage.tsx'
 import { DummyPostsPage } from './pages/DummyPostsPage.tsx'
 import { JsonCommentsPage } from './pages/JsonCommentsPage.tsx'
+import {DummyCommentsPage} from "./pages/DummyComments.tsx"
 import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(<BrowserRouter>
@@ -16,5 +17,6 @@ createRoot(document.getElementById('root')!).render(<BrowserRouter>
             <Route path={'/posts/jsonplaceholder'} element={<JsonPostsPage/>}/>
             <Route path={'/posts/dummyjson'} element={<DummyPostsPage/>}/>
             <Route path={'/comments/jsonplaceholder'} element={<JsonCommentsPage/>}/>
+            <Route path={'/comments/dummyjson'} element={<DummyCommentsPage/>}/>
         </Routes>
  </BrowserRouter>)
