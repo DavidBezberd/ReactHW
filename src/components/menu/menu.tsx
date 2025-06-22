@@ -6,17 +6,21 @@ export const Menu = () => {
     return (
         <ul>
             <li>
-                <Link to={'users'}>users</Link>
+                <Link to={'/users/jsonplaceholder'}>users jsonplaceholder</Link>
             </li>
             <li>
-                <Link to={'posts'}>posts</Link>
+                <Link to={'/users/dummyjson'}>users dummyjson</Link>
             </li>
             <li>
-                <Link to={'comments'}>comments</Link>
+                <Link to={'/posts/jsonplaceholder'}>posts jsonplaceholder</Link>
             </li>
             <li>
-                <Link to={'products'}>products</Link>
+                <Link to={'/posts/dummyjson'}>posts dummyjson</Link>
             </li>
+            <li>
+                <Link to={'/comments/jsonplaceholder'}>comments jsonplaceholder</Link>
+            </li>
+
         </ul>
     )
 }
