@@ -1,7 +1,7 @@
-export const PostsComponent = () =>{
+export const JsonPostsComponent = () =>{
     return(
         <div>
-        posts component
+        json posts component
         </div>
     )
 }

@@ -1,7 +1,7 @@
-export const UsersComponent = () =>{
+export const JsonUsersComponent = () =>{
     return(
         <div>
-        users component
+        json users component
         </div>
     )
 }

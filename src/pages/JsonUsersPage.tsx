@@ -1,9 +1,9 @@
-import { UsersComponent } from "../components/users-components/json-users-component/JsonUsersComponent"
+import { JsonUsersComponent } from "../components/users-components/json-users-component/JsonUsersComponent"
 
-export const UsersPage = () => {
+export const JsonUsersPage = () => {
      return(
         <>
-        <UsersComponent/>
+        <JsonUsersComponent/>
         </>
      )
 }

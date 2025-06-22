@@ -1,9 +1,9 @@
-import { CommentsComponent } from "../components/comments-components/json-comments-component/CommentsComponent"
+import { JsonCommentsComponent } from "../components/comments-components/json-comments-component/JsonCommentsComponent"
 
-export const CommentsPage = () => {
+export const JsonCommentsPage = () => {
      return(
         <>
-        <CommentsComponent/>
+        <JsonCommentsComponent/>
         </>
      )
 }
