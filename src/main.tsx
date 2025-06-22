@@ -9,16 +9,10 @@ import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(<BrowserRouter>
         <Routes>
-            <Route path={'/'} element={<App/>}>
-            <Route path={'users'} element={<UsersPage/>}>
-            <Route path={'posts'} element={<PostsPage/>}>
-            <Route path={'comments'} element={<CommentsPage/>}>
-            <Route path={'products'} element={<ProductsPage/>}>
-
-            </Route>
-            </Route>
-            </Route>
-            </Route>
-            </Route>
+            <Route path={'/'} element={<App/>}/>
+            <Route path={'users'} element={<UsersPage/>}/>
+            <Route path={'posts'} element={<PostsPage/>}/>
+            <Route path={'comments'} element={<CommentsPage/>}/>
+            <Route path={'products'} element={<ProductsPage/>}/>
         </Routes>
  </BrowserRouter>)
