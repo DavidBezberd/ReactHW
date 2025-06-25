@@ -1,13 +1,12 @@
-import { createBrowserRouter} from 'react-router-dom'
-import { MainLayout } from '../layouts/MainLayout'
-import { UsersPage } from '../pages/UsersPage'
-import { CartsPage } from '../pages/CartsPage'
+import { createBrowserRouter } from "react-router-dom";
+import { MainLayout } from "../layout/MainLayout";
+import { UsersPage } from "../pages/UsersPage";
+import { PostsPage } from "../pages/PostsPage";
 
 
 export const routes = createBrowserRouter([{
     path: '/', element: <MainLayout/>, children:[
-        {path: 'users', element: <UsersPage/>, children:[
-            {path: ':id/carts', element: <CartsPage/>}
-            ]}
-    ]
+        {path: '/users', element: <UsersPage/>},
+        {path: '/posts', element: <PostsPage/>}
+    ] 
 }])
