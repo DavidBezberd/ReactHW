@@ -1,45 +1,16 @@
-import type { ICommentJson } from "../models/CommentsModel/ICommentsJson";
-import type { IPostsDummy } from "../models/PostsModel/IPostDummy";
-import type { IPostJson } from "../models/PostsModel/IPostJson";
-import type { IUserJson } from "../models/UsersModel/IUsersJson";
-import type { IDummyUser } from "../models/dummyJson/userDummy";
-import { urls } from "./urls";
+import type { ICartsResponseModel } from "../models/ICartsResponseModel";
+import type { IUserResponseModel } from "../models/IUserResponseModel"
 
-export const jsonUserService = {
-    GetJsonUsers: async ():Promise<IUserJson[]> => {
-       return await fetch(urls.jsonUsers.allUsers)
-        .then(value => value.json());
-    }
-}
-export const dummyUserService = async() => {
-    const response: IDummyUser  =
-    await fetch(urls.dummyUsers.allusers)
-    .then(value => value.json());
-    return response.users;
-}
-export const jsonPostService= {
-        GetJsonPosts: async ():Promise<IPostJson[]> => {
-            return await fetch(urls.jsonPosts.allPosts)
-        .then(value => value.json());
-    }
-}
-export const dummyPostService = {
-    GetDummyPosts: async ():Promise<IPostsDummy[]> => {
-         return await fetch(urls.dummyPosts.allPosts)
+const baseUrl = 'https://dummyjson.com'
+export const userService ={
+    getAllUsers: async ():Promise<IUserResponseModel> => {
+        return await fetch(baseUrl + '/users')
         .then(value => value.json())
-        .then(data => data.posts)
     }
+};
+export const cartService = {
+    getAllCarts: async (userId:string):Promise<ICartsResponseModel> => {
+    return await fetch( baseUrl + '/carts/user/' + userId   )
+    .then(value => value.json())
 }
-export const jsonCommentService = {
-    GetJsonComments: async ():Promise<ICommentJson[]> => {
-        return await fetch(urls.jsonComments.allComments)
-        .then(value => value.json());
-    }
-}
-export const dummyCommentService = {
-    GetDummyComments: async () => {
-        return await fetch(urls.dummyComments.allCommnets)
-        .then(value => value.json())
-        .then(data => data.comments)
-    }
 }

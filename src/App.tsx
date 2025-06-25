@@ -1,14 +1,12 @@
-import { Outlet } from 'react-router-dom';
 import './App.css'
-import { Menu } from './components/menu/menu';
 import './components/menu/menu.css';
+import { UsersPage } from './pages/UsersPage';
 
 
 function App () {
   return (
     <>
-    <Menu/>
-    <Outlet/>
+    <UsersPage/>
     </>
   );
 }
